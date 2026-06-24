@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --animate-pulse-slow: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #030712;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: #f3f4f6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Glowing backgrounds */
+.glow-orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.glow-orb-primary {
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 100%);
+  top: 10%;
+  left: -100px;
+}
+
+.glow-orb-secondary {
+  background: radial-gradient(circle, #a855f7 0%, #ec4899 100%);
+  bottom: 20%;
+  right: -100px;
+}
+
+.glow-orb-tertiary {
+  background: radial-gradient(circle, #6366f1 0%, #3b82f6 100%);
+  top: 50%;
+  left: 30%;
+}
